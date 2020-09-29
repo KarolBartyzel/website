@@ -1,0 +1,105 @@
+.experience-title {
+  font-weight: bold;
+  margin: 15px;
+  font-family: 'Odstemplik';
+}
+
+.experience-entry {
+  display: flex;
+  margin-bottom: 20px;
+  width: 95%;
+  background-color: rgb(236, 236, 236);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience-entry-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+  padding: 0 30px;
+  width: 100%;
+}
+
+.experience-entry-responsibilities, .experience-entry-technologies {
+  margin-bottom: 15px;
+}
+
+.experience-entry-responsibilities > ul, .experience-entry-technologies > ul {
+  list-style: none;
+  margin: 0;
+}
+
+.experience-entry-responsibilities li::before {
+  content: "\2611";
+  display: inline-block;
+  width: 1.5em;
+  margin-left: -2em;
+}
+
+.experience-entry-technologies li::before {
+  content: "\1F527";
+  display: inline-block;
+  width: 1.5em;
+  margin-left: -2em;
+}
+
+.experience-entry-title {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.experience-entry-description {
+  margin-bottom: 15px;
+}
+
+.experience-entry-company {
+  display: flex;
+}
+
+.experience-entry-company-logo {
+  margin-right: 10px;
+  height: 1em;
+}
+
+.experience-entry-product {
+  text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .experience-entry {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-entry-date {
+    border-bottom: black solid 1px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .experience-entry-date {
+    width: 150px;
+    text-align: start;
+    height: 75px;
+    border-right: black solid 1px;
+    margin-right: 10px;
+  }
+}
+

@@ -5,7 +5,5 @@ import SubmenuItem from './SubmenuItem';
 
 import './index.css';
 
-const Navigation = { Menu, Submenu };
-Navigation.Menu.Item = MenuItem;
-Navigation.Submenu.Item = SubmenuItem;
+const Navigation = {Menu, MenuItem, Submenu, SubmenuItem};
 export default Navigation;

@@ -1,10 +1,8 @@
 .App {
-  background-color: whitesmoke;
   text-align: center;
 }
 
 .Content {
     max-width: 98vw;
     overflow: hidden;
-    margin-top: 80px;
 }

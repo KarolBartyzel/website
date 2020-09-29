@@ -1,9 +1,13 @@
+html {
+  background-color: whitesmoke;
+}
+
 @font-face {
-    font-family: 'Odstemplik';
-    src: url("odstemplik.woff");
-  }
+  font-family: 'Odstemplik';
+  src: url("odstemplik.woff");
+}
 
 body {
   margin: 0;
-  font-family: 'Odstemplik';
+  font-family: 'Roboto';
 }

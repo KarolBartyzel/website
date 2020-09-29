@@ -1,4 +1,5 @@
 .Navigation-Menu {
+    font-family: 'Odstemplik';
     position: fixed;
     top: 0;
     background-color: whitesmoke;
@@ -36,6 +37,7 @@
 
 
 .Navigation-Submenu {
+    font-family: 'Odstemplik';
     position: fixed;
     top: 50px;
     background-color: whitesmoke;

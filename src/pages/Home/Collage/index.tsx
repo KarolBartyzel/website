@@ -1,15 +1,12 @@
 import React from 'react';
 
 import Carousel from './Carousel';
-import Im1 from './images/im1.png';
-import Im2 from './images/im2.png';
-import Im3 from './images/im3.png';
 
 import './index.css';
 
-const images = [Im1, Im2, Im3];
+const images = ['/Images/Collage1.png', '/Images/Collage2.png', '/Images/Collage3.png'];
 
-export default function Collage(props) {
+const Collage: PageType = function Collage() {
   return (
     <div className="Home">
       <Carousel
@@ -24,3 +21,5 @@ export default function Collage(props) {
     </div>
   );
 }
+
+export default Collage;
