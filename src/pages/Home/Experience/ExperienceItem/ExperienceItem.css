@@ -1,0 +1,34 @@
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 50%;
+}
+
+.experience-item-role {
+  font-weight: bold;
+  margin: 5px;
+}
+
+.experience-item-company {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.experience-item-company-logo {
+  margin-right: 10px;
+  height: 1.5em;
+}
+
+.experience-item-company-name {
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .experience-item {
+    width: 100%;
+    flex-direction: column;
+  }
+}

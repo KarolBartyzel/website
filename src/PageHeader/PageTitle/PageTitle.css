@@ -1,0 +1,20 @@
+.page-title {
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  height: 40px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .page-title {
+    position: relative;
+    left: unset;
+    top: unset;
+    margin: 5px auto;
+  }
+}

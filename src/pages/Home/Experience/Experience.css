@@ -1,0 +1,33 @@
+.experiences {
+  background-color: rgb(236, 236, 236);
+  border-radius: 5px;
+  width: 96vw;
+  margin: auto;
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+}
+
+.experience-title {
+  font-weight: bold;
+  margin: 15px;
+  font-family: 'Odstemplik';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+  .experience-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
