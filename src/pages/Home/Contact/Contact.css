@@ -1,0 +1,32 @@
+.contact {
+  background-color: rgb(236, 236, 236);
+  border-radius: 5px;
+  width: 96vw;
+  margin: auto;
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+}
+
+.contact-title {
+  font-family: 'Odstemplik';
+  font-weight: bold;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-content {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .contact-content {
+    flex-direction: row;
+  }
+}

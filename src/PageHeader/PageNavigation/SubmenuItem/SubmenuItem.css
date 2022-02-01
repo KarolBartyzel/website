@@ -1,0 +1,27 @@
+.Navigation-Submenu-Item {
+  font-size: 1.2em;
+  padding: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Navigation-Submenu-Item--current {
+  font-weight: bold;
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .Navigation-Submenu-Item-Title {
+      display: none;
+  }
+
+  .Navigation-Submenu-Item {
+    font-size: 1em;
+    padding: 0 10px;
+    margin: 0 5px;
+  }
+}

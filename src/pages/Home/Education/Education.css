@@ -1,0 +1,32 @@
+.education {
+  background-color: rgb(236, 236, 236);
+  width: 96vw;
+  margin: auto;
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+}
+
+.education-title {
+  font-weight: bold;
+  margin: 15px;
+  font-family: 'Odstemplik';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.education-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+
+@media screen and (max-width: 600px) {
+  .education-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}

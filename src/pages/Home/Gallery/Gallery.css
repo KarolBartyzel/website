@@ -1,0 +1,52 @@
+.carousel {
+    width: calc(100vw);
+    height: calc(60vh);
+    position: relative;
+}
+
+.carousel-title {
+    font-family: 'Odstemplik';
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: whitesmoke;
+    font-size: 3em;
+    font-style: italic;
+}
+
+.carousel-item {
+    margin: 0;
+    width: 78%;
+    height: 100%;
+    position: absolute;
+    transition: left 0.8s;
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 600px) {
+  .carousel {
+    height: calc(60vh);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel-title-Intro {
+      font-size: 1em;
+  }
+
+  .carousel-title-Name {
+      font-size: 2em;
+  }
+
+  .carousel-item:not(.carousel-item--hidden) {
+    width: 100vw;
+    transform: translateX(-11vw);
+  }
+
+  .carousel-item--hidden {
+    visibility: hidden;
+  }
+}
