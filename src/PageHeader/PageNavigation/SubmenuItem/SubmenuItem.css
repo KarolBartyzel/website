@@ -16,7 +16,7 @@
 
 @media screen and (max-width: 600px) {
   .Navigation-Submenu-Item-Title {
-      display: none;
+    display: none;
   }
 
   .Navigation-Submenu-Item {

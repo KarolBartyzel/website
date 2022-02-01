@@ -16,12 +16,11 @@
 
 @media screen and (max-width: 600px) {
   .Navigation-Menu-Item-Title {
-      display: none;
+    display: none;
   }
 
-
   .Navigation-Menu-Item-Title {
-      display: none;
+    display: none;
   }
 
   .Navigation-Menu-Item {

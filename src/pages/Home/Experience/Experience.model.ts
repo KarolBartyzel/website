@@ -1,20 +1,20 @@
-import esetIcon from './ESET.png'
-import mediusIcon from './Medius.png'
-import pwcIcon from './PwC.png'
-import inTeamIcon from './InTeam.svg'
+import esetIcon from './ESET.png';
+import mediusIcon from './Medius.png';
+import pwcIcon from './PwC.png';
+import inTeamIcon from './InTeam.svg';
 
 export type ExperienceType = {
-  date: [string, string]
-  role: string
+  date: [string, string];
+  role: string;
   company: {
-    icon: string
-    name: string
-  }
+    icon: string;
+    name: string;
+  };
   agency?: {
-    icon: string
-    name: string
-  }
-}
+    icon: string;
+    name: string;
+  };
+};
 
 export const experiences: Array<ExperienceType> = [
   {
@@ -53,4 +53,4 @@ export const experiences: Array<ExperienceType> = [
       name: 'IN Team',
     },
   },
-]
+];

@@ -1,5 +1,4 @@
 .posts-list {
-
 }
 
 .posts-list-entry {
@@ -22,16 +21,13 @@
   }
 }
 
-
 @media screen and (max-width: 600px) {
   .posts-list-entry-details {
     flex-direction: column-reverse;
   }
 }
 
-
 .posts-list-entry-title {
-
 }
 
 .posts-list-entry-summary {

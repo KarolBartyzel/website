@@ -4,7 +4,7 @@ html {
 
 @font-face {
   font-family: 'Odstemplik';
-  src: url("odstemplik.woff");
+  src: url('odstemplik.woff');
 }
 
 body {
