@@ -1,13 +1,13 @@
-import aghIcon from './agh.jpg';
+import aghIcon from './agh.jpg'
 
 export type EducationType = {
-  date: [string, string],
-  title: string,
+  date: [string, string]
+  title: string
   university: {
-    name: string,
-    icon: string,
-  },
-};
+    name: string
+    icon: string
+  }
+}
 
 export const educations: Array<EducationType> = [
   {
@@ -16,7 +16,7 @@ export const educations: Array<EducationType> = [
     university: {
       name: 'AGH UST, Krakow',
       icon: aghIcon,
-    }
+    },
   },
   {
     date: ['2019-03-01', '2020-07-16'],
@@ -24,6 +24,6 @@ export const educations: Array<EducationType> = [
     university: {
       name: 'AGH UST, Krakow',
       icon: aghIcon,
-    }
+    },
   },
-];
+]

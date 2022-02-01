@@ -1,11 +1,7 @@
 import React from 'react';
-import {FaHome, FaFolderOpen, FaImages, FaUniversity, FaBriefcase, FaAddressCard, FaBlog} from 'react-icons/fa';
-import { IconType } from 'react-icons/lib';
 
 import PageHeader, { pages } from './PageHeader';
 import PageContent from './PageContent';
-import Home from './Pages/Home';
-import Blog from './Pages/Blog';
 
 import './App.css';
 

@@ -1,1 +1,1 @@
-export { default } from './SubmenuItem';
+export { default } from './SubmenuItem'

@@ -3,31 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
     "@types/classnames": "^2.2.10",
-    "@types/jest": "^26.0.7",
-    "@types/lodash": "^4.14.178",
     "@types/node": "^14.0.25",
     "@types/react": "^16.9.43",
     "@types/react-copy-to-clipboard": "^5.0.2",
     "@types/react-dom": "^16.9.8",
     "classnames": "^2.2.6",
     "list-react-files": "^0.2.0",
-    "lodash": "^4.17.21",
     "react": "^16.13.1",
     "react-copy-to-clipboard": "^5.0.4",
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
-    "react-scripts": "3.4.1",
-    "typescript": "^3.9.7"
+    "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+    "lint:fix": "eslint --ignore-path .eslintignore --ext .js,.ts . --fix",
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,7 +41,13 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-google": "^0.14.0",
-    "eslint-plugin-react": "^7.20.3"
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/jest": "^26.0.7",
+    "@typescript-eslint/parser": "^2.34.0",
+    "eslint": "^6.8.0",
+    "prettier": "^2.5.1",
+    "typescript": "^3.9.7"
   }
 }

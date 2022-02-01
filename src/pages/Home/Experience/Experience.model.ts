@@ -1,20 +1,20 @@
-import esetIcon from './ESET.png';
-import mediusIcon from './Medius.png';
-import pwcIcon from './PwC.png';
-import inTeamIcon from './InTeam.svg';
+import esetIcon from './ESET.png'
+import mediusIcon from './Medius.png'
+import pwcIcon from './PwC.png'
+import inTeamIcon from './InTeam.svg'
 
 export type ExperienceType = {
-  date: [string, string],
-  role: string,
+  date: [string, string]
+  role: string
   company: {
-    icon: string,
-    name: string,
-  },
+    icon: string
+    name: string
+  }
   agency?: {
-    icon: string,
-    name: string,
-  },
-};
+    icon: string
+    name: string
+  }
+}
 
 export const experiences: Array<ExperienceType> = [
   {
@@ -22,7 +22,7 @@ export const experiences: Array<ExperienceType> = [
     role: 'Full Stack Developer Intern',
     company: {
       icon: mediusIcon,
-      name: 'Medius Poland'
+      name: 'Medius Poland',
     },
   },
   {
@@ -30,7 +30,7 @@ export const experiences: Array<ExperienceType> = [
     role: 'Junior Full Stack Developer',
     company: {
       icon: mediusIcon,
-      name: 'Medius Poland'
+      name: 'Medius Poland',
     },
   },
   {
@@ -38,7 +38,7 @@ export const experiences: Array<ExperienceType> = [
     role: 'Regular React Developer',
     company: {
       icon: esetIcon,
-      name: 'ESET Poland'
+      name: 'ESET Poland',
     },
   },
   {
@@ -46,11 +46,11 @@ export const experiences: Array<ExperienceType> = [
     role: 'Senior React Developer',
     company: {
       icon: pwcIcon,
-      name: 'PwC Poland'
+      name: 'PwC Poland',
     },
     agency: {
       icon: inTeamIcon,
-      name: 'IN Team'
-    }
+      name: 'IN Team',
+    },
   },
-];
+]

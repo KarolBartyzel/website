@@ -1,20 +1,28 @@
-import { IconType } from "react-icons";
-import { FaAddressCard, FaBlog, FaBriefcase, FaFolderOpen, FaHome, FaImages, FaUniversity } from "react-icons/fa";
-import Blog from "../../Pages/Blog";
-import Home from "../../Pages/Home";
-import { withFocus } from "./PageNavigation.helpers";
+import { IconType } from 'react-icons'
+import {
+  FaAddressCard,
+  FaBlog,
+  FaBriefcase,
+  FaFolderOpen,
+  FaHome,
+  FaImages,
+  FaUniversity,
+} from 'react-icons/fa'
+import Blog from '../../pages/Blog'
+import Home from '../../pages/Home'
+import { withFocus } from './PageNavigation.helpers'
 
 type NavigationSubpageType = {
-  title: string,
-  Icon: IconType,
-  Component: PageType,
-};
+  title: string
+  Icon: IconType
+  Component: PageType
+}
 
 type NavigationPageType = {
-  title: string,
-  Icon: IconType,
-  subpages: Array<NavigationSubpageType>,
-};
+  title: string
+  Icon: IconType
+  subpages: Array<NavigationSubpageType>
+}
 
 const pages: Array<NavigationPageType> = [
   {
@@ -46,9 +54,7 @@ const pages: Array<NavigationPageType> = [
   {
     title: 'Projects',
     Icon: FaFolderOpen,
-    subpages: [
-
-    ],
+    subpages: [],
   },
   {
     title: 'Blog',
@@ -61,13 +67,13 @@ const pages: Array<NavigationPageType> = [
       },
     ],
   },
-].map((page) => ({
+].map(page => ({
   ...page,
   subpages: page.subpages.map((subpage: NavigationSubpageType) => ({
     ...subpage,
     Component: withFocus(subpage.Component),
   })),
-}));
+}))
 
-export type { NavigationPageType, NavigationSubpageType };
-export { pages };
+export type { NavigationPageType, NavigationSubpageType }
+export { pages }
