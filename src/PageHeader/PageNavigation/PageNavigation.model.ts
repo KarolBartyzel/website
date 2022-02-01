@@ -8,6 +8,7 @@ import {
   FaUniversity,
 } from 'react-icons/fa';
 import Home from '../../pages/Home';
+// import Portfolio from '../../pages/Portfolio';
 import { withFocus } from './PageNavigation.helpers';
 
 type NavigationSubpageType = {
@@ -50,9 +51,15 @@ const pages: Array<NavigationPageType> = [
     ],
   },
   {
-    title: 'Projects',
+    title: 'Portfolio',
     Icon: FaFolderOpen,
-    subpages: [],
+    subpages: [
+      // {
+      //   title: 'Portfolio',
+      //   Icon: FaFolderOpen,
+      //   Component: Portfolio,
+      // },
+    ],
   },
   // {
   //   title: 'Blog',

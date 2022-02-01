@@ -23,7 +23,7 @@ const Gallery = () => {
       images[index + imageUrls.length] = imageUrls[index % imageUrls.length];
       setImages(images);
       setIndex(i => i + 1);
-    }, 2000);
+    }, 5000);
     return () => {
       window.clearInterval(interval);
     };
@@ -40,7 +40,7 @@ const Gallery = () => {
           }`}
           style={{
             backgroundImage: `url(${image})`,
-            left: `${11 + 80 * (Number(i) - index)}vw`,
+            left: `${21 + 60 * (Number(i) - index)}vw`,
           }}
         ></div>
       ))}

@@ -18,7 +18,7 @@
 
 .carousel-item {
   margin: 0;
-  width: 78%;
+  width: 58%;
   height: 100%;
   position: absolute;
   transition: left 0.8s;
@@ -43,7 +43,7 @@
 
   .carousel-item:not(.carousel-item--hidden) {
     width: 100vw;
-    transform: translateX(-11vw);
+    transform: translateX(-21vw);
   }
 
   .carousel-item--hidden {
