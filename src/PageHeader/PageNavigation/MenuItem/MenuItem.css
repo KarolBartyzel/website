@@ -15,14 +15,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .Navigation-Menu-Item-Title {
-    display: none;
-  }
-
-  .Navigation-Menu-Item-Title {
-    display: none;
-  }
-
   .Navigation-Menu-Item {
     font-size: 1.2em;
     padding: 0 10px;

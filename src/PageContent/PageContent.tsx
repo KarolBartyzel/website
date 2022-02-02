@@ -9,10 +9,7 @@ const PageContent = ({
   setCurrentSubpage,
 }: PageContentProps) => {
   return (
-    <div
-      className="content"
-      style={{ marginTop: currentPage.subpages.length > 1 ? '80px' : '50px' }}
-    >
+    <div className="content">
       {currentPage.subpages.map(subpage => {
         const { Component: Subpage } = subpage;
         const key = `${currentPage.title}_${subpage.title}`;

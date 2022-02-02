@@ -3,6 +3,7 @@ import { IconType } from 'react-icons/lib';
 import classnames from 'classnames';
 
 import './MenuItem.css';
+import { useWindowSize, WINDOW_SIZE } from '../../../hooks';
 
 export default function MenuItem({
   isCurrent,
@@ -10,6 +11,7 @@ export default function MenuItem({
   title,
   Icon,
 }: ItemProps) {
+  const windowSize = useWindowSize();
   return (
     <div
       className={classnames('Navigation-Menu-Item', {
@@ -18,7 +20,9 @@ export default function MenuItem({
       onClick={onClick}
     >
       {<Icon style={{ margin: '0 10px' }} />}
-      <span className="Navigation-Menu-Item-Title">{title}</span>
+      {windowSize === WINDOW_SIZE.WEB && (
+        <span className="Navigation-Menu-Item-Title">{title}</span>
+      )}
     </div>
   );
 }
