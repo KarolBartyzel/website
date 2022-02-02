@@ -1,6 +1,7 @@
 .swipe-detector {
   padding: 10px;
-  margin: 0 10px;
+  margin: 0 5px;
+  margin-bottom: 10px;
   border: 1px solid darkgray;
   border-radius: 5px;
   display: flex;

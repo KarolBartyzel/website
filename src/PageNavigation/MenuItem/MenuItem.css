@@ -1,4 +1,4 @@
-.Navigation-Menu-Item {
+.navigation-menu-item {
   font-size: 1.5em;
   padding: 10px;
   margin: 0 10px;
@@ -9,15 +9,14 @@
   align-items: center;
 }
 
-.Navigation-Menu-Item--current {
+.navigation-menu-item--current {
   font-weight: bold;
   color: black;
 }
 
 @media screen and (max-width: 600px) {
-  .Navigation-Menu-Item {
-    font-size: 1.2em;
-    padding: 0 10px;
+  .navigation-menu-item {
+    padding: 10px;
     margin: 0;
   }
 }

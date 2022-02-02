@@ -1,6 +1,7 @@
 .education {
   background-color: rgb(236, 236, 236);
-  width: 96vw;
+  min-width: 98vw;
+  width: calc(100% - 30px);
   margin: auto;
   margin-top: 2vw;
   margin-bottom: 1vw;
@@ -8,7 +9,7 @@
 
 .education-title {
   font-weight: bold;
-  margin: 15px;
+  margin: 10px;
   font-family: 'Odstemplik';
 }
 

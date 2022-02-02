@@ -1,4 +1,4 @@
-.Navigation-Menu {
+.navigation-menu {
   height: 50px;
   display: flex;
   flex-direction: row;
@@ -6,7 +6,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .Navigation-Menu {
-    height: 25px;
+  .navigation-menu {
+    height: 35px;
   }
 }

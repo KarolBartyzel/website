@@ -43,34 +43,6 @@ const Portfolio = () => {
   return (
     <div className="portfolio">
       <h1 className="portfolio-title">Portfolio</h1>
-      {windowSize === WINDOW_SIZE.MOBILE && (
-        <>
-          <div className="portfolio-switch">
-            <div
-              className={classnames('portfolio-switch-item', {
-                'portfolio-switch-item--chosen': isInfoVisible,
-              })}
-              onClick={handleSwitchInfoClick}
-            >
-              Information
-            </div>
-            <div
-              className={classnames('portfolio-switch-item', {
-                'portfolio-switch-item--chosen': isDemoVisible,
-              })}
-              onClick={handleSwitchDemoClick}
-            >
-              Demo
-            </div>
-          </div>
-          <SwipeDetector
-            isSwipeRightDisabled={activeProjectIndex === projects.length - 1}
-            isSwipeLeftDisabled={activeProjectIndex === 0}
-            handleSwipeLeft={handleSwipeLeft}
-            handleSwipeRight={handleSwipeRight}
-          />
-        </>
-      )}
       <div className="portfolio-content">
         {windowSize === WINDOW_SIZE.WEB && (
           <FaArrowLeft
@@ -109,6 +81,34 @@ const Portfolio = () => {
           />
         )}
       </div>
+      {windowSize === WINDOW_SIZE.MOBILE && (
+        <div className="portfolio-switch">
+          <div
+            className={classnames('portfolio-switch-item', {
+              'portfolio-switch-item--chosen': isInfoVisible,
+            })}
+            onClick={handleSwitchInfoClick}
+          >
+            Information
+          </div>
+          <div
+            className={classnames('portfolio-switch-item', {
+              'portfolio-switch-item--chosen': isDemoVisible,
+            })}
+            onClick={handleSwitchDemoClick}
+          >
+            Demo
+          </div>
+        </div>
+      )}
+      {windowSize === WINDOW_SIZE.MOBILE && (
+        <SwipeDetector
+          isSwipeRightDisabled={activeProjectIndex === projects.length - 1}
+          isSwipeLeftDisabled={activeProjectIndex === 0}
+          handleSwipeLeft={handleSwipeLeft}
+          handleSwipeRight={handleSwipeRight}
+        />
+      )}
     </div>
   );
 };

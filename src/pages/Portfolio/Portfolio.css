@@ -1,8 +1,9 @@
 .portfolio {
   background-color: rgb(236, 236, 236);
-  width: 96vw;
+  min-width: 98vw;
+  width: calc(100% - 30px);
   margin: auto;
-  height: calc(100vh - 110px);
+  height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   border-radius: 5px;
@@ -46,6 +47,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .portfolio {
+    height: calc(100vh - 81px);
+  }
+
   .portfolio-items {
     width: 100%;
     height: 100%;
@@ -55,6 +60,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 10px;
     margin-bottom: 10px;
   }
 
@@ -75,6 +81,5 @@
   }
 
   .portfolio-items {
-    height: calc(100% - 40px);
   }
 }

@@ -2,41 +2,41 @@ import React, { useCallback } from 'react';
 
 const withFocus = (Component: PageType) => {
   const Comp = (props: CompType) => {
-    const subpageRef = React.useRef() as React.MutableRefObject<HTMLDivElement>;
+    const pageRef = React.useRef() as React.MutableRefObject<HTMLDivElement>;
 
     const isFocused = useCallback(() => {
-      const lower = subpageRef.current.offsetTop - 80;
-      const upper = lower + subpageRef.current.offsetHeight;
+      const lower = pageRef.current.offsetTop - 80;
+      const upper = lower + pageRef.current.offsetHeight;
       const { scrollY, innerHeight } = window;
       return (
         (lower < scrollY && upper - scrollY > (innerHeight - 80) / 2) ||
         (lower > scrollY && lower - scrollY < (innerHeight - 80) / 2)
       );
-    }, [subpageRef]);
+    }, [pageRef]);
 
     React.useEffect(() => {
       const onWheel = () => {
         if (isFocused()) {
-          props.setCurrentSubpage();
+          props.setCurrentPage();
         }
       };
       window.addEventListener('wheel', onWheel);
       return () => {
         window.removeEventListener('wheel', onWheel);
       };
-    }, [props, isFocused, subpageRef]);
+    }, [props, isFocused, pageRef]);
 
     React.useEffect(() => {
-      if (subpageRef.current !== undefined && props.isCurrent && !isFocused()) {
+      if (pageRef.current !== undefined && props.isCurrent && !isFocused()) {
         window.scrollTo({
-          top: subpageRef.current.offsetTop - 80,
+          top: pageRef.current.offsetTop - 80,
           behavior: 'smooth',
         });
       }
-    }, [isFocused, subpageRef, props.isCurrent]);
+    }, [isFocused, pageRef, props.isCurrent]);
 
     return (
-      <div ref={subpageRef}>
+      <div ref={pageRef}>
         <Component {...props} />
       </div>
     );
@@ -47,7 +47,7 @@ const withFocus = (Component: PageType) => {
 
 type CompType = {
   isCurrent: boolean;
-  setCurrentSubpage: () => void;
+  setCurrentPage: () => void;
 };
 
 export { withFocus };

@@ -1,23 +1,15 @@
 .page-title {
   position: absolute;
   left: 25px;
-  top: 15px;
-  height: 40px;
-  z-index: 3;
-  display: flex;
-  justify-content: center;
+  top: 5px;
   cursor: pointer;
-  background-color: rgb(236, 236, 236);
-  border-radius: 5px;
-  padding: 5px 10px;
-  margin: auto;
 }
 
 @media screen and (max-width: 600px) {
   .page-title {
     position: relative;
+    padding-top: 5px;
     left: unset;
     top: unset;
-    margin: 5px auto;
   }
 }

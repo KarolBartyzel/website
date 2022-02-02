@@ -2,6 +2,7 @@
   width: calc(100vw);
   height: calc(60vh);
   position: relative;
+  margin-bottom: 1vh;
 }
 
 .carousel-title {
@@ -11,7 +12,7 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  color: whitesmoke;
+  color: white;
   font-size: 3em;
   font-style: italic;
 }

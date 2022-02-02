@@ -2,17 +2,9 @@
   font-family: 'Odstemplik';
   position: sticky;
   top: 0;
-  background-color: whitesmoke;
+  background-color: white;
   width: 100vw;
   margin: auto;
-  height: 80px;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-}
-
-@media screen and (max-width: 600px) {
-  .page-header {
-    height: 110px;
-  }
+  border-bottom: solid 1.5px darkgray;
 }

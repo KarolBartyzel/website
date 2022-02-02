@@ -1,23 +1,20 @@
 import React, { Dispatch } from 'react';
-import { NavigationPageType, NavigationSubpageType } from '../PageHeader';
+import { NavigationPageType, pages } from '../PageNavigation';
 
 import './PageContent.css';
 
-const PageContent = ({
-  currentPage,
-  currentSubpage,
-  setCurrentSubpage,
-}: PageContentProps) => {
+const PageContent = ({ currentPage, setCurrentPage }: PageContentProps) => {
+  const currentPages = pages.filter(({ part }) => part === currentPage.part);
+
   return (
     <div className="content">
-      {currentPage.subpages.map(subpage => {
-        const { Component: Subpage } = subpage;
-        const key = `${currentPage.title}_${subpage.title}`;
+      {currentPages.map(page => {
+        const { Component, title } = page;
         return (
-          <Subpage
-            key={key}
-            isCurrent={subpage.title === currentSubpage.title}
-            setCurrentSubpage={() => setCurrentSubpage(subpage)}
+          <Component
+            key={title}
+            isCurrent={title === currentPage.title}
+            setCurrentPage={() => setCurrentPage(page)}
           />
         );
       })}
@@ -27,8 +24,7 @@ const PageContent = ({
 
 type PageContentProps = {
   currentPage: NavigationPageType;
-  currentSubpage: NavigationSubpageType;
-  setCurrentSubpage: Dispatch<NavigationSubpageType>;
+  setCurrentPage: Dispatch<NavigationPageType>;
 };
 
 export default PageContent;

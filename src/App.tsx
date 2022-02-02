@@ -1,31 +1,27 @@
 import React from 'react';
 
-import PageHeader, { pages } from './PageHeader';
+import PageHeader from './PageHeader';
 import PageContent from './PageContent';
-
+import { useWindowSize, WINDOW_SIZE } from './hooks';
+import PageNavigation, { pages } from './PageNavigation';
 import './App.css';
 
-function App() {
+const App = () => {
+  const windowSize = useWindowSize();
   const [currentPage, setCurrentPage] = React.useState(pages[0]);
-  const [currentSubpage, setCurrentSubpage] = React.useState(
-    pages[0].subpages[0]
-  );
 
   return (
-    <div className="App">
-      <PageHeader
-        currentPage={currentPage}
-        currentSubpage={currentSubpage}
-        setCurrentPage={setCurrentPage}
-        setCurrentSubpage={setCurrentSubpage}
-      />
-      <PageContent
-        currentPage={currentPage}
-        currentSubpage={currentSubpage}
-        setCurrentSubpage={setCurrentSubpage}
-      />
+    <div className="app">
+      <PageHeader currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <PageContent currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      {windowSize === WINDOW_SIZE.MOBILE && (
+        <PageNavigation
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
+      )}
     </div>
   );
-}
+};
 
 export default App;
