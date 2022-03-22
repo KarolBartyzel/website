@@ -2,15 +2,18 @@ import React from 'react';
 import { IconType } from 'react-icons/lib';
 import classnames from 'classnames';
 
-import './MenuItem.css';
 import { useWindowSize, WINDOW_SIZE } from '../../hooks';
 
-export default function MenuItem({
-  isCurrent,
-  onClick,
-  title,
-  Icon,
-}: ItemProps) {
+import './MenuItem.css';
+
+type Props = {
+  title: string;
+  Icon: IconType;
+  isCurrent: boolean;
+  onClick: (event: React.MouseEvent) => void;
+};
+
+const MenuItem = ({ isCurrent, onClick, title, Icon }: Props) => {
   const windowSize = useWindowSize();
   return (
     <div
@@ -25,11 +28,6 @@ export default function MenuItem({
       )}
     </div>
   );
-}
-
-type ItemProps = {
-  title: string;
-  Icon: IconType;
-  isCurrent: boolean;
-  onClick: (event: React.MouseEvent) => void;
 };
+
+export default MenuItem;

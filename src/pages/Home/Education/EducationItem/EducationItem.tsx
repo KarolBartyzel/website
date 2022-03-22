@@ -1,11 +1,13 @@
 import React from 'react';
 
-import { EducationType } from '../Education.model';
+import { EducationModel } from '../Education.model';
 import './EducationItem.css';
 
-function EducationItem({
-  education: { date, title, university },
-}: EducationEntryPropsType) {
+type Props = {
+  education: EducationModel;
+};
+
+const EducationItem = ({ education: { date, title, university } }: Props) => {
   const [startDate, endDate] = date.map((date: string) =>
     !isNaN(Date.parse(date))
       ? new Date(date).toLocaleDateString('en-US', {
@@ -30,10 +32,6 @@ function EducationItem({
       </h3>
     </div>
   );
-}
-
-type EducationEntryPropsType = {
-  education: EducationType;
 };
 
 export default EducationItem;

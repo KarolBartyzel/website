@@ -3,12 +3,19 @@ import classnames from 'classnames';
 
 import './SwipeDetector.css';
 
+type Props = {
+  isSwipeLeftDisabled: boolean;
+  isSwipeRightDisabled: boolean;
+  handleSwipeLeft: () => void;
+  handleSwipeRight: () => void;
+};
+
 const SwipeDetector = ({
   isSwipeLeftDisabled,
   isSwipeRightDisabled,
   handleSwipeLeft,
   handleSwipeRight,
-}: SwipeDetectorProps) => {
+}: Props) => {
   const [startClientX, setStartClientX] = useState(0);
 
   const handleTouchStart: React.TouchEventHandler<HTMLDivElement> = e => {
@@ -45,13 +52,6 @@ const SwipeDetector = ({
       >{`>>>`}</div>
     </div>
   );
-};
-
-type SwipeDetectorProps = {
-  isSwipeLeftDisabled: boolean;
-  isSwipeRightDisabled: boolean;
-  handleSwipeLeft: () => void;
-  handleSwipeRight: () => void;
 };
 
 export default SwipeDetector;

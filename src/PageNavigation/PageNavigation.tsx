@@ -2,13 +2,15 @@ import React, { Dispatch } from 'react';
 
 import Menu from './Menu';
 import MenuItem from './MenuItem';
-import { pages, NavigationPageType } from './PageNavigation.model';
+import { pages, NavigationPageModel } from './PageNavigation.model';
 import './PageNavigation.css';
 
-const PageNavigation = ({
-  currentPage,
-  setCurrentPage,
-}: PageNavigationProps) => {
+type Props = {
+  currentPage: NavigationPageModel;
+  setCurrentPage: Dispatch<NavigationPageModel>;
+};
+
+const PageNavigation = ({ currentPage, setCurrentPage }: Props) => {
   return (
     <div className="page-navigation">
       <Menu>
@@ -24,11 +26,6 @@ const PageNavigation = ({
       </Menu>
     </div>
   );
-};
-
-type PageNavigationProps = {
-  currentPage: NavigationPageType;
-  setCurrentPage: Dispatch<NavigationPageType>;
 };
 
 export default PageNavigation;

@@ -5,7 +5,7 @@ import ContactItem from './ContactItem';
 import { EMAIL, GITHUB_PROFILE, LINKED_IN_PROFILE } from './Contact.model';
 import './Contact.css';
 
-const Contact: PageType = () => {
+const Contact: PageComponentModel = () => {
   const onLinkedinClick = () => {
     window.open(`https://www.linkedin.com/in/${LINKED_IN_PROFILE}/`);
   };

@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 
-const withFocus = (Component: PageType) => {
-  const Comp = (props: CompType) => {
+const withFocus = (Component: PageComponentModel) => {
+  const Comp = (props: ComponentProps) => {
     const pageRef = React.useRef() as React.MutableRefObject<HTMLDivElement>;
 
     const isFocused = useCallback(() => {
@@ -45,7 +45,7 @@ const withFocus = (Component: PageType) => {
   return Comp;
 };
 
-type CompType = {
+type ComponentProps = {
   isCurrent: boolean;
   setCurrentPage: () => void;
 };

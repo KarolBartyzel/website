@@ -1,9 +1,14 @@
 import React, { Dispatch } from 'react';
-import { NavigationPageType, pages } from '../PageNavigation';
+import { NavigationPageModel, pages } from '../PageNavigation';
 
 import './PageContent.css';
 
-const PageContent = ({ currentPage, setCurrentPage }: PageContentProps) => {
+type Props = {
+  currentPage: NavigationPageModel;
+  setCurrentPage: Dispatch<NavigationPageModel>;
+};
+
+const PageContent = ({ currentPage, setCurrentPage }: Props) => {
   const currentPages = pages.filter(({ part }) => part === currentPage.part);
 
   return (
@@ -20,11 +25,6 @@ const PageContent = ({ currentPage, setCurrentPage }: PageContentProps) => {
       })}
     </div>
   );
-};
-
-type PageContentProps = {
-  currentPage: NavigationPageType;
-  setCurrentPage: Dispatch<NavigationPageType>;
 };
 
 export default PageContent;

@@ -10,14 +10,14 @@ import Home from '../pages/Home';
 import Portfolio from '../pages/Portfolio';
 import { withFocus } from './PageNavigation.helpers';
 
-type NavigationPageType = {
+type NavigationPageModel = {
   part: string;
   title: string;
   Icon: IconType;
-  Component: PageType;
+  Component: PageComponentModel;
 };
 
-const pages: Array<NavigationPageType> = [
+const pages: Array<NavigationPageModel> = [
   {
     part: 'Home',
     title: 'Home',
@@ -53,5 +53,5 @@ const pages: Array<NavigationPageType> = [
   Component: withFocus(page.Component),
 }));
 
-export type { NavigationPageType };
+export type { NavigationPageModel };
 export { pages };

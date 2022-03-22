@@ -1,10 +1,15 @@
 import React from 'react';
 
-import { ExperienceType } from '../Experience.model';
+import { ExperienceModel } from '../Experience.model';
 import './ExperienceItem.css';
 
-function ExperienceItem(props: ExperienceItemProps) {
-  const { date, role, company, agency } = props.experience;
+type Props = {
+  experience: ExperienceModel;
+};
+
+const ExperienceItem = ({
+  experience: { date, role, company, agency },
+}: Props) => {
   const [startDate, endDate] = date.map((date: string) =>
     !isNaN(Date.parse(date))
       ? new Date(date).toLocaleDateString('en-US', {
@@ -41,10 +46,6 @@ function ExperienceItem(props: ExperienceItemProps) {
       </h3>
     </div>
   );
-}
-
-type ExperienceItemProps = {
-  experience: ExperienceType;
 };
 
 export default ExperienceItem;

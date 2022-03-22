@@ -1,4 +1,4 @@
-export type EducationType = {
+export type EducationModel = {
   date: [string, string];
   title: string;
   university: {
@@ -7,7 +7,7 @@ export type EducationType = {
   };
 };
 
-export const educations: Array<EducationType> = [
+export const educations: Array<EducationModel> = [
   {
     date: ['2015-10-01', '2019-02-28'],
     title: 'Bachelor of Engineering in Computer Science',

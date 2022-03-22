@@ -2,10 +2,12 @@ import React from 'react';
 
 import './Menu.css';
 
-export default function Menu(props: MenuProps) {
-  return <div className="navigation-menu">{props.children}</div>;
-}
-
-type MenuProps = {
+type Props = {
   children: React.ReactNode;
 };
+
+const Menu = ({ children }: Props) => (
+  <div className="navigation-menu">{children}</div>
+);
+
+export default Menu;

@@ -1,8 +1,15 @@
 import React from 'react';
 import { FaGithubSquare, FaLink } from 'react-icons/fa';
 
-import { Project } from '../Portfolio.model';
+import { ProjectModel } from '../Portfolio.model';
+
 import './PortfolioItem.css';
+
+type Props = ProjectModel & {
+  position: number;
+  isInfoVisible: boolean;
+  isDemoVisible: boolean;
+};
 
 const PortfolioItem = ({
   name,
@@ -13,7 +20,7 @@ const PortfolioItem = ({
   demoUrl,
   isInfoVisible,
   isDemoVisible,
-}: PortfolioItemProps) => (
+}: Props) => (
   <div className="portfolio-item" style={{ left: `${position}vw` }}>
     {isInfoVisible && (
       <div className="portfolio-item-info">
@@ -67,11 +74,5 @@ const PortfolioItem = ({
     )}
   </div>
 );
-
-type PortfolioItemProps = Project & {
-  position: number;
-  isInfoVisible: boolean;
-  isDemoVisible: boolean;
-};
 
 export default PortfolioItem;

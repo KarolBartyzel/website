@@ -4,7 +4,14 @@ import { IconContext, IconType } from 'react-icons';
 
 import './ContactItem.css';
 
-const ContactItem = ({ label, color, Icon, handleClick }: ContactItemProps) => {
+type Props = {
+  label: string;
+  color?: string;
+  Icon: IconType;
+  handleClick: () => void;
+};
+
+const ContactItem = ({ label, color, Icon, handleClick }: Props) => {
   return (
     <div className="contact-item">
       <IconContext.Provider value={{ color }}>
@@ -15,13 +22,6 @@ const ContactItem = ({ label, color, Icon, handleClick }: ContactItemProps) => {
       </IconContext.Provider>
     </div>
   );
-};
-
-type ContactItemProps = {
-  label: string;
-  color?: string;
-  Icon: IconType;
-  handleClick: () => void;
 };
 
 export default ContactItem;

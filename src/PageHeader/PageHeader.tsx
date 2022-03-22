@@ -1,11 +1,17 @@
 import React, { Dispatch } from 'react';
 
 import { useWindowSize, WINDOW_SIZE } from '../hooks';
-import PageNavigation, { NavigationPageType, pages } from '../PageNavigation';
+import PageNavigation, { NavigationPageModel, pages } from '../PageNavigation';
 import PageTitle from './PageTitle';
+
 import './PageHeader.css';
 
-const PageHeader = ({ currentPage, setCurrentPage }: PageHeaderProps) => {
+type Props = {
+  currentPage: NavigationPageModel;
+  setCurrentPage: Dispatch<NavigationPageModel>;
+};
+
+const PageHeader = ({ currentPage, setCurrentPage }: Props) => {
   const windowSize = useWindowSize();
   const handleClick = () => setCurrentPage(pages[0]);
 
@@ -20,11 +26,6 @@ const PageHeader = ({ currentPage, setCurrentPage }: PageHeaderProps) => {
       <PageTitle onClick={handleClick} />
     </div>
   );
-};
-
-type PageHeaderProps = {
-  currentPage: NavigationPageType;
-  setCurrentPage: Dispatch<NavigationPageType>;
 };
 
 export default PageHeader;

@@ -1,4 +1,4 @@
-export type ExperienceType = {
+export type ExperienceModel = {
   date: [string, string];
   role: string;
   company: {
@@ -11,7 +11,7 @@ export type ExperienceType = {
   };
 };
 
-export const experiences: Array<ExperienceType> = [
+export const experiences: Array<ExperienceModel> = [
   {
     date: ['2017-07-01', '2017-09-30'],
     role: 'Full Stack Developer Intern',
