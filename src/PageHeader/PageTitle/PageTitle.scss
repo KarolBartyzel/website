@@ -1,0 +1,15 @@
+.page-title {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .page-title {
+    position: relative;
+    padding-top: 5px;
+    left: unset;
+    top: unset;
+  }
+}

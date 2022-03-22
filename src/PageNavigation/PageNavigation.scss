@@ -1,0 +1,11 @@
+@import '../theme.scss';
+
+@media screen and (max-width: 800px) {
+  .page-navigation {
+    position: fixed;
+    background-color: $bg-color-primary;
+    border-top: solid 1.5px $color-secondary;
+    bottom: 0;
+    width: 100vw;
+  }
+}

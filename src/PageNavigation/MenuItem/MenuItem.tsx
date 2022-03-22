@@ -22,9 +22,9 @@ const MenuItem = ({ isCurrent, onClick, title, Icon }: Props) => {
       })}
       onClick={onClick}
     >
-      {<Icon style={{ margin: '0 10px' }} />}
-      {windowSize === WINDOW_SIZE.WEB && (
-        <span className="navigation-menu-item-Title">{title}</span>
+      {<Icon style={{ marginRight: '5px' }} />}
+      {windowSize !== WINDOW_SIZE.MOBILE && (
+        <span className="navigation-menu-item-title">{title}</span>
       )}
     </div>
   );

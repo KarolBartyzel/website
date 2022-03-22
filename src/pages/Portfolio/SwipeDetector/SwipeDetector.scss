@@ -1,0 +1,20 @@
+@import '../../../theme.scss';
+
+.swipe-detector {
+  padding: 10px;
+  margin: 0 5px;
+  margin-bottom: 10px;
+  border: 1px solid $color-secondary;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.swipe-arrows {
+  margin: 0 10px;
+}
+
+.swipe-arrows--disabled {
+  opacity: 0.3;
+}

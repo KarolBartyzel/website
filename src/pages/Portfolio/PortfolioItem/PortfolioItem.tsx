@@ -26,38 +26,27 @@ const PortfolioItem = ({
       <div className="portfolio-item-info">
         <div className="portfolio-item-name">
           <h3>
-            <b>Project:</b> {name}
+            <b>Project</b> <i>{name}</i>
+          </h3>
+        </div>
+        <div className="portfolio-item-technologies">
+          <h3>
+            <b>Technologies</b> <i>{technologies.join(', ')}</i>
           </h3>
         </div>
         <div className="portfolio-item-description">
           <h3>
-            <b>Description</b>
+            <b>Description</b> <i>{description}</i>
           </h3>
-          <h3>{description}</h3>
-        </div>
-        <div className="portfolio-item-technologies">
-          <h3>
-            <b>Technologies</b>
-          </h3>
-          <ul>
-            {technologies.map(technology => (
-              <li key={technology}>{technology}</li>
-            ))}
-          </ul>
         </div>
         <div className="portfolio-item-links">
-          <h3>
-            <b>Links</b>
-          </h3>
-          <div className="portfolio-item-links-list">
-            <div className="portfolio-item-url">
-              <FaGithubSquare size="2.5em" />
-              <a href={repoUrl}>Code</a>
-            </div>
-            <div className="portfolio-item-url">
-              <FaLink size="2.5em" />
-              <a href={demoUrl}>Demo</a>
-            </div>
+          <div className="portfolio-item-url">
+            <FaGithubSquare size="2.5em" />
+            <a href={repoUrl}>Code</a>
+          </div>
+          <div className="portfolio-item-url">
+            <FaLink size="2.5em" />
+            <a href={demoUrl}>Demo</a>
           </div>
         </div>
       </div>

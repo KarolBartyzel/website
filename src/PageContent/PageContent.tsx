@@ -9,7 +9,9 @@ type Props = {
 };
 
 const PageContent = ({ currentPage, setCurrentPage }: Props) => {
-  const currentPages = pages.filter(({ part }) => part === currentPage.part);
+  const [currentPages] = pages.filter(subpages =>
+    subpages.includes(currentPage)
+  );
 
   return (
     <div className="content">

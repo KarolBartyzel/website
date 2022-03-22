@@ -1,6 +1,5 @@
 export enum WINDOW_SIZE {
-  MOBILE = 0,
-  WEB = 1,
+  MOBILE = 600,
+  TABLET = 800,
+  WEB = 1200,
 }
-
-export const TRESHOLD = 600;

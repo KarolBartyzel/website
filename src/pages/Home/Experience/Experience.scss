@@ -1,0 +1,15 @@
+@import '../../../theme.scss';
+@import '../../pages.scss';
+
+.experiences {
+  @extend .page;
+}
+
+.experience-title {
+  @extend .page-title;
+}
+
+.experience-content {
+  @extend .page-content;
+  flex-wrap: wrap;
+}

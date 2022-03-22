@@ -1,0 +1,28 @@
+.education-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2vw 0;
+}
+
+.education-item-title {
+  font-weight: bold;
+}
+
+.education-item-university {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.education-item-university-icon {
+  height: 1.5em;
+  margin-right: 5px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  .education-item {
+    flex-direction: column;
+  }
+}

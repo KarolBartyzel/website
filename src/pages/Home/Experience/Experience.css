@@ -1,29 +1,25 @@
+.page,
 .experiences {
-  background-color: rgb(236, 236, 236);
+  background-color: #bcd2ee;
   border-radius: 5px;
-  min-width: 98vw;
-  width: calc(100% - 30px);
-  margin: auto;
-  margin-top: 2vw;
-  margin-bottom: 1vw;
-}
+  margin: 2vw 0.5vw 1vw 0.5vw;
+  padding: 0.5vh 0.5vw; }
 
+.page-title,
 .experience-title {
   font-weight: bold;
-  margin: 10px;
-  font-family: 'Odstemplik';
-}
+  font-family: 'Odstemplik'; }
 
+.page-content,
 .experience-content {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-}
+  align-items: center; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
+  .page-content,
   .experience-content {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+    flex-direction: column; } }
+
+.experience-content {
+  flex-wrap: wrap; }

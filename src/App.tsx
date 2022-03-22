@@ -2,19 +2,20 @@ import React from 'react';
 
 import PageHeader from './PageHeader';
 import PageContent from './PageContent';
-import { useWindowSize, WINDOW_SIZE } from './hooks';
 import PageNavigation, { pages } from './PageNavigation';
+import { useWindowSize, WINDOW_SIZE } from './hooks';
+
 import './App.css';
 
 const App = () => {
   const windowSize = useWindowSize();
-  const [currentPage, setCurrentPage] = React.useState(pages[0]);
+  const [currentPage, setCurrentPage] = React.useState(pages[0][0]);
 
   return (
     <div className="app">
       <PageHeader currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <PageContent currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      {windowSize === WINDOW_SIZE.MOBILE && (
+      {windowSize !== WINDOW_SIZE.WEB && (
         <PageNavigation
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}

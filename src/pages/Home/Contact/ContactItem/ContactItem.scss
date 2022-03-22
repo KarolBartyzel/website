@@ -1,0 +1,16 @@
+.contact-item {
+  flex-direction: column;
+  width: 150px;
+  margin: 2vw 60px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.contact-item-caption {
+  cursor: text;
+}
+
+.contact-item-icon {
+  height: 2em;
+}

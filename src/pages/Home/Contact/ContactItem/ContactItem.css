@@ -1,16 +1,13 @@
 .contact-item {
   flex-direction: column;
   width: 150px;
-  margin: 15px 60px;
+  margin: 2vw 60px;
   display: flex;
   align-items: center;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .contact-item-caption {
-  cursor: text;
-}
+  cursor: text; }
 
 .contact-item-icon {
-  height: 2em;
-}
+  height: 2em; }

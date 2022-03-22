@@ -8,7 +8,7 @@ type Props = {
 
 const PageTitle = ({ onClick }: Props) => (
   <h1 className="page-title" onClick={onClick}>
-    Karol Bartyzel's website
+    Karol Bartyzel
   </h1>
 );
 

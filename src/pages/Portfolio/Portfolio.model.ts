@@ -9,8 +9,8 @@ export type ProjectModel = {
 export const projects = [
   {
     name: 'React',
-    description:
-      'Sth about React is a very long description that can take pages.',
+    description: `Sth about React is a very long description that can take pages. Sth more about React is a very long
+      description that can take pages.`,
     technologies: ['React', 'Typescript'],
     repoUrl: 'https://github.com/facebook/react',
     demoUrl: 'https://pl.reactjs.org/',

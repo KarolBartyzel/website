@@ -44,7 +44,7 @@ const Portfolio = () => {
     <div className="portfolio">
       <h1 className="portfolio-title">Portfolio</h1>
       <div className="portfolio-content">
-        {windowSize === WINDOW_SIZE.WEB && (
+        {windowSize !== WINDOW_SIZE.MOBILE && (
           <FaArrowLeft
             className={classnames('portfolio-arrow', {
               'portfolio-arrow--disabled': activeProjectIndex === 0,
@@ -70,7 +70,7 @@ const Portfolio = () => {
             )
           )}
         </div>
-        {windowSize === WINDOW_SIZE.WEB && (
+        {windowSize !== WINDOW_SIZE.MOBILE && (
           <FaArrowRight
             className={classnames('portfolio-arrow', {
               'portfolio-arrow--disabled':
@@ -81,7 +81,7 @@ const Portfolio = () => {
           />
         )}
       </div>
-      {windowSize === WINDOW_SIZE.MOBILE && (
+      {windowSize !== WINDOW_SIZE.WEB && (
         <div className="portfolio-switch">
           <div
             className={classnames('portfolio-switch-item', {

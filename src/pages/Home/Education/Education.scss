@@ -1,0 +1,15 @@
+@import '../../../theme.scss';
+@import '../../pages.scss';
+
+.education {
+  @extend .page;
+}
+
+.education-title {
+  @extend .page-title;
+}
+
+.education-content {
+  @extend .page-content;
+  justify-content: space-evenly;
+}

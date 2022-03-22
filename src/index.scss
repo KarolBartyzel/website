@@ -1,0 +1,16 @@
+@import 'theme.scss';
+
+@font-face {
+  font-family: 'Odstemplik';
+  src: url('odstemplik.woff');
+}
+
+html {
+  background-color: $bg-color-primary;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family-text;
+  overflow-x: hidden;
+}

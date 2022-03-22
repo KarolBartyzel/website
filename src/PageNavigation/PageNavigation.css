@@ -1,9 +1,7 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .page-navigation {
     position: fixed;
-    background-color: white;
-    border-top: solid 1.5px darkgray;
+    background-color: #d6eeff;
+    border-top: solid 1.5px gray;
     bottom: 0;
-    width: 100vw;
-  }
-}
+    width: 100vw; } }

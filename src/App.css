@@ -1,6 +1,5 @@
 .app {
-  text-align: center;
-}
+  text-align: center; }
 
 h1,
 h2,
@@ -9,63 +8,41 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-weight: normal;
-}
+  font-weight: normal; }
 
 h1 {
-  font-size: 2.2rem;
-}
+  font-size: 2.5rem; }
 
 h2 {
-  font-size: 2em;
-}
+  font-size: 2em; }
 
 h3 {
-  font-size: 1.5em;
-}
+  font-size: 1.5em; }
 
 h4 {
-  font-size: 1.3em;
-}
+  font-size: 1.3em; }
 
 h5 {
-  font-size: 1em;
-}
+  font-size: 1em; }
 
 h6 {
-  font-size: 0.8em;
-}
+  font-size: 0.8em; }
 
 li {
-  font-size: 1.5em;
-}
+  font-size: 1.5em; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   h1 {
-    font-size: 1.8rem;
-  }
-
+    font-size: 2rem; }
   h2 {
-    font-size: 1.5em;
-  }
-
+    font-size: 1.5em; }
   h3 {
-    font-size: 1.2em;
-  }
-
+    font-size: 1.2em; }
   h4 {
-    font-size: 1em;
-  }
-
+    font-size: 1em; }
   h5 {
-    font-size: 0.9em;
-  }
-
+    font-size: 0.9em; }
   h6 {
-    font-size: 0.8em;
-  }
-
+    font-size: 0.8em; }
   li {
-    font-size: 1.2em;
-  }
-}
+    font-size: 1.2em; } }

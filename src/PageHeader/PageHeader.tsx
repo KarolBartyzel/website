@@ -13,7 +13,7 @@ type Props = {
 
 const PageHeader = ({ currentPage, setCurrentPage }: Props) => {
   const windowSize = useWindowSize();
-  const handleClick = () => setCurrentPage(pages[0]);
+  const handleClick = () => setCurrentPage(pages[0][0]);
 
   return (
     <div className="page-header">

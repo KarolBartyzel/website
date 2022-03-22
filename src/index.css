@@ -1,14 +1,11 @@
-html {
-  background-color: white;
-}
-
 @font-face {
   font-family: 'Odstemplik';
-  src: url('odstemplik.woff');
-}
+  src: url("odstemplik.woff"); }
+
+html {
+  background-color: #d6eeff; }
 
 body {
   margin: 0;
   font-family: 'Roboto';
-  overflow-x: hidden;
-}
+  overflow-x: hidden; }

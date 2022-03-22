@@ -11,47 +11,47 @@ import Portfolio from '../pages/Portfolio';
 import { withFocus } from './PageNavigation.helpers';
 
 type NavigationPageModel = {
-  part: string;
   title: string;
   Icon: IconType;
   Component: PageComponentModel;
 };
 
-const pages: Array<NavigationPageModel> = [
-  {
-    part: 'Home',
-    title: 'Home',
-    Icon: FaHome,
-    Component: Home.Gallery,
-  },
-  {
-    part: 'Home',
-    title: 'Experience',
-    Icon: FaBriefcase,
-    Component: Home.Experience,
-  },
-  {
-    part: 'Home',
-    title: 'Education',
-    Icon: FaUniversity,
-    Component: Home.Education,
-  },
-  {
-    part: 'Home',
-    title: 'Contact',
-    Icon: FaAddressCard,
-    Component: Home.Contact,
-  },
-  {
-    part: 'portfolio',
-    title: 'Portfolio',
-    Icon: FaFolderOpen,
-    Component: Portfolio,
-  },
-].map(page => ({
-  ...page,
-  Component: withFocus(page.Component),
-}));
+const pages: NavigationPageModel[][] = [
+  [
+    {
+      title: 'Home',
+      Icon: FaHome,
+      Component: Home.Photo,
+    },
+    {
+      title: 'Experience',
+      Icon: FaBriefcase,
+      Component: Home.Experience,
+    },
+    {
+      title: 'Education',
+      Icon: FaUniversity,
+      Component: Home.Education,
+    },
+    {
+      title: 'Contact',
+      Icon: FaAddressCard,
+      Component: Home.Contact,
+    },
+  ],
+  [
+    {
+      title: 'Portfolio',
+      Icon: FaFolderOpen,
+      Component: Portfolio,
+    },
+  ],
+].map(pages =>
+  pages.map(page => ({
+    ...page,
+    Component: withFocus(page.Component),
+  }))
+);
 
 export type { NavigationPageModel };
 export { pages };

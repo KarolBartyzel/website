@@ -1,0 +1,14 @@
+@import '../theme.scss';
+
+.content {
+  margin: auto;
+  margin-top: 0 !important;
+  overflow: hidden;
+  background-color: $bg-color-primary;
+}
+
+@media screen and (max-width: 800px) {
+  .content {
+    padding-bottom: 35px;
+  }
+}

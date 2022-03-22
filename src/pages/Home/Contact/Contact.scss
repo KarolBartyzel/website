@@ -1,0 +1,15 @@
+@import '../../../theme.scss';
+@import '../../pages.scss';
+
+.contact {
+  @extend .page;
+}
+
+.contact-title {
+  @extend .page-title;
+}
+
+.contact-content {
+  @extend .page-content;
+  justify-content: center;
+}
