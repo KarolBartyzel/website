@@ -44,7 +44,7 @@ const Portfolio = () => {
     <div className="portfolio">
       <h1 className="portfolio-title">Portfolio</h1>
       <div className="portfolio-content">
-        {windowSize !== WINDOW_SIZE.MOBILE && (
+        {windowSize !== WINDOW_SIZE.S && (
           <FaArrowLeft
             className={classnames('portfolio-arrow', {
               'portfolio-arrow--disabled': activeProjectIndex === 0,
@@ -64,13 +64,13 @@ const Portfolio = () => {
                 technologies={technologies}
                 repoUrl={repoUrl}
                 demoUrl={demoUrl}
-                isInfoVisible={windowSize === WINDOW_SIZE.WEB || isInfoVisible}
-                isDemoVisible={windowSize === WINDOW_SIZE.WEB || isDemoVisible}
+                isInfoVisible={windowSize === WINDOW_SIZE.L || isInfoVisible}
+                isDemoVisible={windowSize === WINDOW_SIZE.L || isDemoVisible}
               />
             )
           )}
         </div>
-        {windowSize !== WINDOW_SIZE.MOBILE && (
+        {windowSize !== WINDOW_SIZE.S && (
           <FaArrowRight
             className={classnames('portfolio-arrow', {
               'portfolio-arrow--disabled':
@@ -81,7 +81,7 @@ const Portfolio = () => {
           />
         )}
       </div>
-      {windowSize !== WINDOW_SIZE.WEB && (
+      {windowSize !== WINDOW_SIZE.L && (
         <div className="portfolio-switch">
           <div
             className={classnames('portfolio-switch-item', {
@@ -101,7 +101,7 @@ const Portfolio = () => {
           </div>
         </div>
       )}
-      {windowSize === WINDOW_SIZE.MOBILE && (
+      {windowSize === WINDOW_SIZE.S && (
         <SwipeDetector
           isSwipeRightDisabled={activeProjectIndex === projects.length - 1}
           isSwipeLeftDisabled={activeProjectIndex === 0}

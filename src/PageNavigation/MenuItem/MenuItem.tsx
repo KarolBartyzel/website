@@ -2,8 +2,6 @@ import React from 'react';
 import { IconType } from 'react-icons/lib';
 import classnames from 'classnames';
 
-import { useWindowSize, WINDOW_SIZE } from '../../hooks';
-
 import './MenuItem.css';
 
 type Props = {
@@ -14,7 +12,6 @@ type Props = {
 };
 
 const MenuItem = ({ isCurrent, onClick, title, Icon }: Props) => {
-  const windowSize = useWindowSize();
   return (
     <div
       className={classnames('navigation-menu-item', {
@@ -23,9 +20,7 @@ const MenuItem = ({ isCurrent, onClick, title, Icon }: Props) => {
       onClick={onClick}
     >
       {<Icon style={{ marginRight: '5px' }} />}
-      {windowSize !== WINDOW_SIZE.MOBILE && (
-        <span className="navigation-menu-item-title">{title}</span>
-      )}
+      <span className="navigation-menu-item-title">{title}</span>
     </div>
   );
 };

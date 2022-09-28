@@ -3,6 +3,14 @@
 
 .experiences {
   @extend .page;
+
+  &.experience-content {
+    &:last-child {
+      & .experience-border {
+        display: none;
+      }
+    }
+  }
 }
 
 .experience-title {

@@ -1,5 +1,5 @@
 import React, { Dispatch } from 'react';
-import { NavigationPageModel, pages } from '../PageNavigation';
+import { NavigationPageModel } from '../PageNavigation';
 
 import './PageContent.css';
 
@@ -9,22 +9,14 @@ type Props = {
 };
 
 const PageContent = ({ currentPage, setCurrentPage }: Props) => {
-  const [currentPages] = pages.filter(subpages =>
-    subpages.includes(currentPage)
-  );
-
+  const { Component, title } = currentPage;
   return (
     <div className="content">
-      {currentPages.map(page => {
-        const { Component, title } = page;
-        return (
-          <Component
-            key={title}
-            isCurrent={title === currentPage.title}
-            setCurrentPage={() => setCurrentPage(page)}
-          />
-        );
-      })}
+      <Component
+        key={title}
+        isCurrent={title === currentPage.title}
+        setCurrentPage={() => setCurrentPage(currentPage)}
+      />
     </div>
   );
 };

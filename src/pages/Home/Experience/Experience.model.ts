@@ -13,16 +13,8 @@ export type ExperienceModel = {
 
 export const experiences: Array<ExperienceModel> = [
   {
-    date: ['2017-07-01', '2017-09-30'],
-    role: 'Full Stack Developer Intern',
-    company: {
-      icon: '/Images/medius.jpg',
-      name: 'Medius Poland',
-    },
-  },
-  {
-    date: ['2017-10-01', '2018-08-30'],
-    role: 'Junior Full Stack Developer',
+    date: ['2017-07-01', '2018-08-30'],
+    role: 'Full Stack Developer',
     company: {
       icon: '/Images/medius.jpg',
       name: 'Medius Poland',
@@ -30,15 +22,15 @@ export const experiences: Array<ExperienceModel> = [
   },
   {
     date: ['2018-09-01', '2020-11-30'],
-    role: 'Regular React Developer',
+    role: 'React Developer',
     company: {
       icon: '/Images/eset.jpg',
       name: 'ESET Poland',
     },
   },
   {
-    date: ['2020-12-01', 'Present'],
-    role: 'Senior React Developer',
+    date: ['2020-12-01', '2022-05-31'],
+    role: 'React Developer',
     company: {
       icon: '/Images/pwc.jpg',
       name: 'PwC Poland',
@@ -46,6 +38,14 @@ export const experiences: Array<ExperienceModel> = [
     agency: {
       icon: '/Images/in-team.svg',
       name: 'IN Team',
+    },
+  },
+  {
+    date: ['2022-06-01', 'Present'],
+    role: 'React Developer',
+    company: {
+      icon: '/Images/nftnerds.svg',
+      name: 'NFTNerds',
     },
   },
 ];

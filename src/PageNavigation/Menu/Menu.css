@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   margin-left: calc(150px - 10vw);
-  font-family: 'Odstemplik'; }
+  font-family: "Odstemplik"; }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   .navigation-menu {
     margin-left: 0;
     height: 35px; } }

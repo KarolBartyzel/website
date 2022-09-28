@@ -15,11 +15,15 @@ const useWindowSize = () => {
     };
   }, []);
 
-  return width <= WINDOW_SIZE.MOBILE
-    ? WINDOW_SIZE.MOBILE
-    : width <= WINDOW_SIZE.TABLET
-    ? WINDOW_SIZE.TABLET
-    : WINDOW_SIZE.WEB;
+  return width < WINDOW_SIZE.S
+    ? WINDOW_SIZE.XS
+    : width < WINDOW_SIZE.M
+    ? WINDOW_SIZE.S
+    : width < WINDOW_SIZE.L
+    ? WINDOW_SIZE.M
+    : width < WINDOW_SIZE.XL
+    ? WINDOW_SIZE.L
+    : WINDOW_SIZE.XL;
 };
 
 export default useWindowSize;

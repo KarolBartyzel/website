@@ -1,5 +1,7 @@
 export enum WINDOW_SIZE {
-  MOBILE = 600,
-  TABLET = 800,
-  WEB = 1200,
+  XS = 0,
+  S = 500,
+  M = 700,
+  L = 1100,
+  XL = 1500,
 }

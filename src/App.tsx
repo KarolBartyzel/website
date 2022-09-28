@@ -9,13 +9,13 @@ import './App.css';
 
 const App = () => {
   const windowSize = useWindowSize();
-  const [currentPage, setCurrentPage] = React.useState(pages[0][0]);
+  const [currentPage, setCurrentPage] = React.useState(pages[0]);
 
   return (
     <div className="app">
       <PageHeader currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <PageContent currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      {windowSize !== WINDOW_SIZE.WEB && (
+      {windowSize < WINDOW_SIZE.M && (
         <PageNavigation
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}

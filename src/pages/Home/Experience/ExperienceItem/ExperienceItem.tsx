@@ -20,30 +20,32 @@ const ExperienceItem = ({
   );
   return (
     <div className="experience-item">
-      <h2 className="experience-item-role">{role}</h2>
-      <div className="experience-item-company">
-        <img
-          className="experience-item-company-logo"
-          src={company.icon}
-          alt={`${company.name} icon`}
-        />
-        {agency && (
+      <div className="experience-item-border">
+        <h2 className="experience-item-role">{role}</h2>
+        <div className="experience-item-company">
           <img
             className="experience-item-company-logo"
-            src={agency.icon}
-            alt={`${agency.name} icon`}
+            src={company.icon}
+            alt={`${company.name} icon`}
           />
-        )}
+          {agency && (
+            <img
+              className="experience-item-company-logo"
+              src={agency.icon}
+              alt={`${agency.name} icon`}
+            />
+          )}
+        </div>
+        <div className="experience-item-company">
+          <h3 className="experience-item-company-name">{company.name}</h3>
+          {agency && (
+            <h3 className="experience-item-company-name">via {agency.name}</h3>
+          )}
+        </div>
+        <h3 className="experience-item-date">
+          {startDate} - {endDate}
+        </h3>
       </div>
-      <div className="experience-item-company">
-        <h3 className="experience-item-company-name">{company.name}</h3>
-        {agency && (
-          <h3 className="experience-item-company-name">via {agency.name}</h3>
-        )}
-      </div>
-      <h3 className="experience-item-date">
-        {startDate} - {endDate}
-      </h3>
     </div>
   );
 };
