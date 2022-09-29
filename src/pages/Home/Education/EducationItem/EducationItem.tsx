@@ -8,27 +8,32 @@ type Props = {
 };
 
 const EducationItem = ({
-  education: { date, title, field, university },
+  education: {
+    startDate: startDateString,
+    endDate: endDateString,
+    title,
+    field,
+    university,
+  },
 }: Props) => {
-  const [startDate, endDate] = date.map((date: string) =>
+  const parseDate = (date: string) =>
     !isNaN(Date.parse(date))
       ? new Date(date).toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'short',
         })
-      : date
-  );
+      : date;
+  const startDate = parseDate(startDateString);
+  const endDate = parseDate(endDateString);
+
   return (
     <div className="education-item">
-      <div className="education-header">
-        <h2 className="education-item-title">{title}</h2>
-        <h2 className="education-item-field">{field}</h2>
-      </div>
-
-      <h3 className="education-item-university">{university.name}</h3>
-      <h3 className="education-item-date">
+      <h2 className="education-item-field">{field}</h2>
+      <h3 className="education-item-title">{title}</h3>
+      <h3 className="education-item-university">{university}</h3>
+      <h4 className="education-item-date">
         {startDate} - {endDate}
-      </h3>
+      </h4>
     </div>
   );
 };

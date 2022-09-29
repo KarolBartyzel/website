@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "@types/classnames": "^2.2.10",
+    "@types/firebase": "^3.2.1",
     "@types/node": "^14.0.25",
     "@types/react": "^16.9.43",
     "@types/react-copy-to-clipboard": "^5.0.2",
     "@types/react-dom": "^16.9.8",
     "classnames": "^2.2.6",
+    "firebase": "^9.10.0",
     "list-react-files": "^0.2.0",
     "react": "^16.13.1",
     "react-copy-to-clipboard": "^5.0.4",

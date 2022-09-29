@@ -8,43 +8,40 @@ type Props = {
 };
 
 const ExperienceItem = ({
-  experience: { date, role, company, agency },
+  experience: {
+    startDate: startDateString,
+    endDate: endDateString,
+    role,
+    company,
+  },
 }: Props) => {
-  const [startDate, endDate] = date.map((date: string) =>
+  const parseDate = (date: string) =>
     !isNaN(Date.parse(date))
       ? new Date(date).toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'short',
         })
-      : date
-  );
+      : date;
+  const startDate = parseDate(startDateString);
+  const endDate = parseDate(endDateString);
+
   return (
     <div className="experience-item">
       <div className="experience-item-border">
-        <h2 className="experience-item-role">{role}</h2>
         <div className="experience-item-company">
           <img
             className="experience-item-company-logo"
-            src={company.icon}
+            src={`/Images/${company.icon}`}
             alt={`${company.name} icon`}
           />
-          {agency && (
-            <img
-              className="experience-item-company-logo"
-              src={agency.icon}
-              alt={`${agency.name} icon`}
-            />
+          {company.name && (
+            <h2 className="experience-item-company-name">{company.name}</h2>
           )}
         </div>
-        <div className="experience-item-company">
-          <h3 className="experience-item-company-name">{company.name}</h3>
-          {agency && (
-            <h3 className="experience-item-company-name">via {agency.name}</h3>
-          )}
-        </div>
-        <h3 className="experience-item-date">
+        <h3 className="experience-item-role">{role}</h3>
+        <h4 className="experience-item-date">
           {startDate} - {endDate}
-        </h3>
+        </h4>
       </div>
     </div>
   );

@@ -12,26 +12,25 @@
   width: 350px;
   max-width: 90%;
   padding: 16px 0;
+  gap: 12px;
 }
 
 .experience-item-role {
-  font-weight: bold;
-  margin: 10px;
+  font-style: italic;
 }
 
 .experience-item-company {
   display: flex;
   align-items: center;
-  margin: 10px;
+  gap: 8px;
 }
 
 .experience-item-company-logo {
-  margin-right: 10px;
   height: 2em;
 }
 
 .experience-item-company-name {
-  margin-right: 10px;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1500px) {
