@@ -1,7 +1,6 @@
 import { IconType } from 'react-icons';
-import { FaFolderOpen, FaHome } from 'react-icons/fa';
-import Home from '../pages/Home';
-import Portfolio from '../pages/Portfolio';
+import { FaHome } from 'react-icons/fa';
+import { Home } from '../pages';
 
 type NavigationPageModel = {
   title: string;
@@ -15,11 +14,11 @@ const pages: NavigationPageModel[] = [
     Icon: FaHome,
     Component: Home,
   },
-  {
-    title: 'Portfolio',
-    Icon: FaFolderOpen,
-    Component: Portfolio,
-  },
+  // {
+  //   title: 'Portfolio',
+  //   Icon: FaFolderOpen,
+  //   Component: Portfolio,
+  // },
 ];
 
 export type { NavigationPageModel };
