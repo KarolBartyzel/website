@@ -1,26 +1,24 @@
 import React from 'react';
-
-import PageHeader from './PageHeader';
-import PageContent from './PageContent';
-import PageNavigation, { pages } from './PageNavigation';
-import { useWindowSize, WINDOW_SIZE } from './hooks';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './App.css';
+import { Blog, Home } from './pages';
 
 const App = () => {
-  const windowSize = useWindowSize();
-  const [currentPage, setCurrentPage] = React.useState(pages[0]);
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Home />,
+    },
+    {
+      path: '/blog',
+      element: <Blog />,
+    },
+  ]);
 
   return (
     <div className="app">
-      <PageHeader currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <PageContent currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      {windowSize < WINDOW_SIZE.M && (
-        <PageNavigation
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-        />
-      )}
+      <RouterProvider router={router} />
     </div>
   );
 };

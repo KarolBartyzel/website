@@ -1,21 +1,29 @@
+@import '../../../theme.scss';
+
 .navigation-menu-item {
   font-size: 1.5em;
   padding: 10px 0;
   margin: 0 0.8vw;
   cursor: pointer;
-  color: gray;
+  color: $color-secondary;
   display: flex;
   flex-direction: row;
-  align-items: center; }
+  align-items: center;
+  text-decoration: none;
+}
 
 .navigation-menu-item--current {
   font-weight: bold;
-  color: black; }
+  color: $color-primary;
+}
 
 .navigation-menu-item-title {
-  height: 26px; }
+  height: 26px;
+}
 
 @media screen and (max-width: 700px) {
   .navigation-menu-item {
     padding: 10px;
-    margin: 0; } }
+    margin: 0;
+  }
+}

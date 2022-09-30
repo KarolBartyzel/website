@@ -1,0 +1,23 @@
+.page-header {
+  font-family: "Odstemplik";
+  position: sticky;
+  top: 0;
+  background-color: #d6eeff;
+  width: 100vw;
+  margin: auto;
+  z-index: 2;
+  border-bottom: solid 1.5px gray; }
+
+.page-title {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  cursor: pointer;
+  color: black; }
+
+@media screen and (max-width: 700px) {
+  .page-title {
+    position: relative;
+    padding-top: 5px;
+    left: unset;
+    top: unset; } }

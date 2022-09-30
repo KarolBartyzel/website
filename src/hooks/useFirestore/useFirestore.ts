@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, getDocs, collection } from 'firebase/firestore';
 import { useCallback, useEffect, useState } from 'react';
+import { BlogModel } from '../../pages/Blog/Blog.model';
 import { ContactModel } from '../../pages/Home/Contact/Contact.model';
 import { EducationModel } from '../../pages/Home/Education/Education.model';
 import { ExperienceModel } from '../../pages/Home/Experience/Experience.model';
@@ -60,4 +61,25 @@ const useHome = () => {
   return { experiences, educations, contact };
 };
 
-export { useHome };
+const useBlog = () => {
+  const [blogs, setBlogs] = useState<BlogModel[] | null>(null);
+
+  const getBlogs = useCallback(async () => {
+    const querySnapshot = await getDocs(collection(db, 'blogs'));
+    const blogs = querySnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data(),
+    })) as BlogModel[];
+    return blogs.sort((blog1, blog2) =>
+      blog1.publishedDate < blog2.publishedDate ? 1 : -1
+    );
+  }, []);
+
+  useEffect(() => {
+    getBlogs().then(blogs => setBlogs(blogs));
+  }, [getBlogs]);
+
+  return { blogs };
+};
+
+export { useHome, useBlog };
