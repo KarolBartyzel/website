@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { EducationModel } from '../Education.model';
-import './EducationItem.css';
 
 type Props = {
   education: EducationModel;
@@ -27,11 +26,11 @@ const EducationItem = ({
   const endDate = parseDate(endDateString);
 
   return (
-    <div className="education-item">
-      <h2 className="education-item-field">{field}</h2>
-      <h3 className="education-item-title">{title}</h3>
-      <h3 className="education-item-university">{university}</h3>
-      <h4 className="education-item-date">
+    <div className="flex flex-col items-center w-full border-gray-500 px-4 gap-3">
+      <h2 className="font-bold text-center">{field}</h2>
+      <h3 className="italic text-center">{title}</h3>
+      <h3 className="underline text-center">{university}</h3>
+      <h4 className="text-center">
         {startDate} - {endDate}
       </h4>
     </div>

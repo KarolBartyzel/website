@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 
-import './SwipeDetector.css';
+// import './SwipeDetector.css';
 
 type Props = {
   isSwipeLeftDisabled: boolean;

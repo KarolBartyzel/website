@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Menu.css';
+// import './Menu.css';
 
 type Props = {
   children: React.ReactNode;

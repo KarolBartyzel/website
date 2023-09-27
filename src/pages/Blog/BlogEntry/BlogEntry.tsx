@@ -1,7 +1,7 @@
 import React, { Dispatch } from 'react';
 
 import { BlogModel } from '../Blog.model';
-import './BlogEntry.scss';
+// import './BlogEntry.scss';
 
 interface IBlogEntry {
   blog: BlogModel;

@@ -2,13 +2,14 @@ import React from 'react';
 import { FaLinkedin, FaEnvelope, FaGithubSquare } from 'react-icons/fa';
 
 import ContactItem from './ContactItem';
-import './Contact.css';
-import { useHome } from '../../../hooks';
 import { Loader } from '../../../components';
+import { ContactModel } from './Contact.model';
 
-const Contact: PageComponentModel = () => {
-  const { contact } = useHome();
+interface IContactProps {
+  contact: ContactModel;
+}
 
+const Contact: PageComponentModel = ({ contact }: IContactProps) => {
   const onLinkedinClick = () => {
     window.open(`https://www.linkedin.com/in/${contact?.linkedin}/`);
   };
@@ -22,10 +23,10 @@ const Contact: PageComponentModel = () => {
   };
 
   return (
-    <div className="contact">
-      <h1 className="contact-title">Contact</h1>
-      <div className="contact-content">
-        {contact ? (
+    <div className="rounded-md flex flex-col gap-8 justify-center items-center p-6 bg-slate-100">
+      <h1 className="text-2xl font-bold font-mono text-center">Contact</h1>
+      {contact ? (
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 w-full">
           <>
             <ContactItem
               label={contact.linkedin}
@@ -45,10 +46,17 @@ const Contact: PageComponentModel = () => {
               handleClick={onGithubClick}
             />
           </>
-        ) : (
-          <Loader />
-        )}
-      </div>
+        </div>
+      ) : (
+        <Loader />
+      )}
+    </div>
+  );
+
+  return (
+    <div className="contact">
+      <h1 className="contact-title">Contact</h1>
+      <div className="contact-content"></div>
     </div>
   );
 };

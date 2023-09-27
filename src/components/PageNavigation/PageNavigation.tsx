@@ -4,11 +4,11 @@ import { pages } from '../../pages';
 import Menu from './Menu';
 import MenuItem from './MenuItem';
 
-import './PageNavigation.css';
+// import './PageNavigation.css';
 
 const PageNavigation = () => {
   return (
-    <div className="page-navigation">
+    <div className="md:fixed md:bottom-0 md:w-screen bg-sky-50">
       <Menu>
         {pages.map(page => (
           <MenuItem

@@ -2,7 +2,7 @@ import React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { IconContext, IconType } from 'react-icons';
 
-import './ContactItem.css';
+// import './ContactItem.css';
 
 type Props = {
   label: string;
@@ -13,11 +13,11 @@ type Props = {
 
 const ContactItem = ({ label, color, Icon, handleClick }: Props) => {
   return (
-    <div className="contact-item">
+    <div className="flex flex-col w-40 items-center cursor-pointer">
       <IconContext.Provider value={{ color }}>
-        <Icon size="2em" className="contact-item-icon" onClick={handleClick} />
+        <Icon size="2em" className="cursor-text" onClick={handleClick} />
         <CopyToClipboard text={label}>
-          <h3 className="contact-item-caption">{label}</h3>
+          <h3 className="h-8">{label}</h3>
         </CopyToClipboard>
       </IconContext.Provider>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ExperienceModel } from '../Experience.model';
-import './ExperienceItem.css';
+import Image from 'next/image';
 
 type Props = {
   experience: ExperienceModel;
@@ -26,20 +26,16 @@ const ExperienceItem = ({
   const endDate = parseDate(endDateString);
 
   return (
-    <div className="experience-item">
-      <div className="experience-item-border">
-        <div className="experience-item-company">
-          <img
-            className="experience-item-company-logo"
-            src={`/Images/${company.icon}`}
-            alt={`${company.name} icon`}
-          />
-          {company.name && (
-            <h2 className="experience-item-company-name">{company.name}</h2>
-          )}
-        </div>
-        <h3 className="experience-item-role">{role}</h3>
-        <h4 className="experience-item-date">
+    <div className="flex flex-col items-center mx-6 border-gray-500">
+      <div className="flex flex-col items-center px-4 gap-3">
+        <img
+          className="h-8"
+          src={`/Images/${company.icon}`}
+          alt={`${company.name} icon`}
+        />
+        {company.name && <h2 className="font-bold">{company.name}</h2>}
+        <h3 className="italic">{role}</h3>
+        <h4 className="">
           {startDate} - {endDate}
         </h4>
       </div>

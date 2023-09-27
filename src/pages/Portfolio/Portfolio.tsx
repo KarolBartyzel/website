@@ -6,7 +6,7 @@ import { useWindowSize, WINDOW_SIZE } from '../../hooks';
 import PortfolioItem from './PortfolioItem';
 import SwipeDetector from './SwipeDetector';
 import { projects } from './Portfolio.model';
-import './Portfolio.css';
+// import './Portfolio.css';
 
 const Portfolio = () => {
   const windowSize = useWindowSize();

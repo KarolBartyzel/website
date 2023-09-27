@@ -3,7 +3,7 @@ import { FaGithubSquare, FaLink } from 'react-icons/fa';
 
 import { ProjectModel } from '../Portfolio.model';
 
-import './PortfolioItem.css';
+// import './PortfolioItem.css';
 
 type Props = ProjectModel & {
   position: number;

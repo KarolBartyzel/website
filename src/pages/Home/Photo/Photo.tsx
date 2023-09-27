@@ -1,14 +1,10 @@
 import React from 'react';
 
-import './Photo.css';
-
 const Photo = () => (
-  <div className="carousel">
-    <div
-      className="carousel-item"
-      style={{ backgroundImage: `url('/Images/photo.jpg')` }}
-    ></div>
-  </div>
+  <img
+    className="max-h-screen w-auto object-cover object-top"
+    src={`/Images/photo.jpg`}
+  />
 );
 
 export default Photo;

@@ -27,5 +27,6 @@
     "indent": 0,
     "react/no-unescaped-entities": 0,
     "react/jsx-max-props-per-line": 0
-  }
+  },
+  "ignorePatterns": ["postcss.config.js", "tailwind.config.js"]
 }

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { IconType } from 'react-icons/lib';
 import classnames from 'classnames';
 
-import './MenuItem.css';
+// import './MenuItem.css';
 
 type Props = {
   title: string;
@@ -12,13 +13,13 @@ type Props = {
 };
 
 const MenuItem = ({ path, title, Icon }: Props) => {
-  const { pathname } = useLocation();
+  const { pathname } = useRouter();
 
   const isCurrent = path === pathname;
 
   return (
     <Link
-      to={path}
+      href={path}
       className={classnames('navigation-menu-item', {
         'navigation-menu-item--current': isCurrent,
       })}
