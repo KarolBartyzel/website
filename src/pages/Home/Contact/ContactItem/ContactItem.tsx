@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import CopyToClipboard from 'react-copy-to-clipboard';
+import copy from 'copy-to-clipboard';
 import { IconContext, IconType } from 'react-icons';
 import { MdContentCopy } from 'react-icons/md';
 // import './ContactItem.css';
@@ -16,7 +16,7 @@ const ContactItem = ({ label, color, Icon, handleClick }: Props) => {
 
   useEffect(() => {
     if (isCopied) {
-      setTimeout(() => setIsCopied(false), 1000);
+      setTimeout(() => setIsCopied(false), 500);
     }
   }, [isCopied]);
   
@@ -24,12 +24,13 @@ const ContactItem = ({ label, color, Icon, handleClick }: Props) => {
     <div className="flex flex-col w-40 items-center gap-2 cursor-pointer">
       <IconContext.Provider value={{ color }}>
         <Icon size="2em" onClick={handleClick} />
-          <CopyToClipboard text={label} onCopy={() => setIsCopied((isCopied) => !isCopied)}>
-            <div className="flex flex-row items-center gap-2">
-              <MdContentCopy color="black" />
-              <h3>{isCopied ? 'Copied!' : label}</h3>
-            </div>
-          </CopyToClipboard>
+          <button className="flex flex-row items-center gap-2" onClick={() => {
+            copy(label);
+            setIsCopied((isCopied) => !isCopied);
+          }}>
+            <MdContentCopy color="black" />
+            <h3>{isCopied ? 'Copied!' : label}</h3>
+          </button>
       </IconContext.Provider>
     </div>
   );
