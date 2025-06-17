@@ -28,11 +28,11 @@ const ExperienceItem = ({
   return (
     <div className="flex flex-col items-center mx-6 border-gray-500">
       <div className="flex flex-col items-center px-4 gap-3">
-        <img
+        {/* <img
           className="h-8"
           src={`/Images/${company.icon}`}
           alt={`${company.name} icon`}
-        />
+        /> */}
         {company.name && <h2 className="font-bold">{company.name}</h2>}
         <h3 className="italic">{role}</h3>
         <h4 className="">

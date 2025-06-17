@@ -7,10 +7,11 @@ import { ContactModel } from '../src/pages/Home/Contact/Contact.model';
 import { EducationModel } from '../src/pages/Home/Education/Education.model';
 import { ExperienceModel } from '../src/pages/Home/Experience/Experience.model';
 import { IHomeProps } from '../src/pages/Home';
+import { InformationModel } from '../src/pages/Home/AboutMe/AboutMe.model';
 
-const HomePage = ({ experiences, educations, contact }: IHomeProps) => {
+const HomePage = ({ experiences, educations, contact, informations }: IHomeProps) => {
   return (
-    <Home experiences={experiences} educations={educations} contact={contact} />
+    <Home experiences={experiences} educations={educations} contact={contact} informations={informations} />
   );
 };
 
@@ -42,10 +43,16 @@ export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
     return contact as ContactModel;
   })();
 
-  console.log(experiences, educations, contact);
+  const informations = await (async () => {
+    const querySnapshot = await getDocs(collection(db, 'informations'));
+    const informations = querySnapshot.docs.map(doc => doc.data());
+    return informations as InformationModel[];
+  })();
+
+  console.log(experiences, educations, contact, informations);
 
   return {
-    props: { experiences, educations, contact },
+    props: { experiences, educations, contact, informations },
   };
 };
 
