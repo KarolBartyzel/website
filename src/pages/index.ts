@@ -1,5 +1,4 @@
-import { FaBlog, FaHome } from 'react-icons/fa';
-import Blog from './Blog';
+import { FaHome } from 'react-icons/fa';
 import Home from './Home';
 import Portfolio from './Portfolio';
 
@@ -10,12 +9,6 @@ const pages = [
     title: 'Home',
     Component: Home,
   },
-  {
-    path: '/blog',
-    Icon: FaBlog,
-    title: 'Blog',
-    Component: Blog,
-  },
 ];
 
-export { Home, Blog, Portfolio, pages };
+export { Home, Portfolio, pages };

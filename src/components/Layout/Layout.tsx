@@ -1,11 +1,7 @@
 import React, { PropsWithChildren } from 'react';
-import { WINDOW_SIZE, useWindowSize } from '../../hooks';
 import PageHeader from '../PageHeader';
-import PageNavigation from '../PageNavigation';
 
 const Layout = ({ children }: PropsWithChildren<unknown>) => {
-  const windowSize = useWindowSize();
-
   return (
     <div className="h-screen w-screen">
       <PageHeader />

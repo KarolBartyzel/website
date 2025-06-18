@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { ExperienceModel } from '../Experience.model';
-import Image from 'next/image';
 
 type Props = {
   experience: ExperienceModel;

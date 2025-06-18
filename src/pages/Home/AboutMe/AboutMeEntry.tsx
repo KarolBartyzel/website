@@ -1,3 +1,4 @@
+import React from 'react';
 import { InformationModel } from "./AboutMe.model";
 
 export const AboutMeEntry = ({ name, value }: InformationModel) => {

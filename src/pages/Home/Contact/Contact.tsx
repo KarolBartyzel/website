@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaEnvelope, FaGithubSquare } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 import ContactItem from './ContactItem';
 import { Loader } from '../../../components';
@@ -12,10 +12,6 @@ interface IContactProps {
 const Contact: PageComponentModel = ({ contact }: IContactProps) => {
   const onLinkedinClick = () => {
     window.open(`https://www.linkedin.com/in/${contact?.linkedin}/`);
-  };
-
-  const onGithubClick = () => {
-    window.open(`https://github.com/${contact?.github}/`);
   };
 
   const onEmailClick = () => {
@@ -45,13 +41,6 @@ const Contact: PageComponentModel = ({ contact }: IContactProps) => {
       ) : (
         <Loader />
       )}
-    </div>
-  );
-
-  return (
-    <div className="contact">
-      <h1 className="contact-title">Contact</h1>
-      <div className="contact-content"></div>
     </div>
   );
 };

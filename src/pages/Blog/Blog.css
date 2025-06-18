@@ -1,8 +1,0 @@
-.blog-entries {
-  width: 1000px;
-  max-width: calc(95vw - 32px);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin: 16px; }

@@ -1,3 +1,4 @@
+import React from 'react';
 import { AboutMeEntry } from "./AboutMeEntry";
 
 interface Props {
