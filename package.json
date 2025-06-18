@@ -23,6 +23,7 @@
     "start:css": "npm run build:css && node-sass src/ -o src/ -w -r",
     "dev": "next dev",
     "build": "next build",
+    "build-project": "node scripts/build-project.js",
     "export": "next export",
     "start": "next start",
     "test": "react-scripts test",

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EducationModel } from '../Education.model';
+import { EducationModel } from './Education.model';
 
 type Props = {
   education: EducationModel;

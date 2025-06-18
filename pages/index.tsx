@@ -8,10 +8,17 @@ import { EducationModel } from '../src/pages/Home/Education/Education.model';
 import { ExperienceModel } from '../src/pages/Home/Experience/Experience.model';
 import { IHomeProps } from '../src/pages/Home';
 import { InformationModel } from '../src/pages/Home/AboutMe/AboutMe.model';
+import { ProjectModel } from '../src/pages/Home/Portfolio/Portfolio.model';
 
-const HomePage = ({ experiences, educations, contact, informations }: IHomeProps) => {
+const HomePage = ({ experiences, educations, contact, informations, projects }: IHomeProps) => {
   return (
-    <Home experiences={experiences} educations={educations} contact={contact} informations={informations} />
+    <Home
+      experiences={experiences}
+      educations={educations}
+      contact={contact}
+      informations={informations}
+      projects={projects}
+    />
   );
 };
 
@@ -21,7 +28,6 @@ export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
     const experiences = querySnapshot.docs.map(doc =>
       doc.data()
     ) as ExperienceModel[];
-    console.log('lala lele', experiences);
     return experiences.sort((experience1, experience2) =>
       experience1.startDate < experience2.startDate ? 1 : -1
     );
@@ -49,10 +55,16 @@ export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
     return informations as InformationModel[];
   })();
 
-  console.log(experiences, educations, contact, informations);
+  const projects: ProjectModel[] = [
+    {
+      name: 'vue-chess',
+      prettyName: 'Chess',
+      technologies: ['Vue.js'],
+    },
+  ];
 
   return {
-    props: { experiences, educations, contact, informations },
+    props: { experiences, educations, contact, informations, projects },
   };
 };
 

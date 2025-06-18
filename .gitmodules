@@ -1,0 +1,3 @@
+[submodule "projects/vue-chess"]
+	path = projects/vue-chess
+	url = https://github.com/KarolBartyzel/vue-chess

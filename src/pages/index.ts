@@ -1,6 +1,5 @@
 import { FaHome } from 'react-icons/fa';
 import Home from './Home';
-import Portfolio from './Portfolio';
 
 const pages = [
   {
@@ -11,4 +10,4 @@ const pages = [
   },
 ];
 
-export { Home, Portfolio, pages };
+export { Home, pages };

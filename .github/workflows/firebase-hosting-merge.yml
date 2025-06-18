@@ -18,6 +18,7 @@ jobs:
 
       - name: Build and export
         run: |
+          npm run build-project vue-chess
           npm run build
           npm run export
 
