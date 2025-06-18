@@ -10,15 +10,20 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout website code
         uses: actions/checkout@v3
 
-      - name: Install dependencies
+      - name: Install website dependencies
         run: npm install
+
+      - name: Checkout projects code
+        run: git submodule update --init --recursive
+
+      - name: Build projects
+        run: npm run build-project vue-chess
 
       - name: Build and export
         run: |
-          npm run build-project vue-chess
           npm run build
           npm run export
 

@@ -16,7 +16,12 @@ const outputDirNames = ['dist', 'build']; // Try both common build outputs
 const publicPath = path.resolve(__dirname, `../public/${appName}`);
 
 function run(cmd, cwd) {
-  console.log(`🔧 Running: ${cmd}`);
+  console.log(`\n🔧 Running: "${cmd}" in ${cwd}`);
+  console.log('📁 projectAppPath:', projectAppPath);
+  console.log(
+    '🔍 vue-chess build script:',
+    require(path.join(projectAppPath, 'package.json')).scripts.build
+  );
   execSync(cmd, { stdio: 'inherit', cwd });
 }
 

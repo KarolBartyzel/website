@@ -11,6 +11,7 @@ export const PortfolioItem = ({ project, setDemoProject }: Props) => {
   const handleCodeClick = () => {
     window.open(`https://github.com/KarolBartyzel/${project.name}`, '_blank');
   };
+  
 
   const handleDemoClick = () => {
     setDemoProject();
