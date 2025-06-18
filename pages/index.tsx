@@ -10,7 +10,13 @@ import { IHomeProps } from '../src/pages/Home';
 import { InformationModel } from '../src/pages/Home/AboutMe/AboutMe.model';
 import { ProjectModel } from '../src/pages/Home/Portfolio/Portfolio.model';
 
-const HomePage = ({ experiences, educations, contact, informations, projects }: IHomeProps) => {
+const HomePage = ({
+  experiences,
+  educations,
+  contact,
+  informations,
+  projects,
+}: IHomeProps) => {
   return (
     <Home
       experiences={experiences}
@@ -56,6 +62,11 @@ export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
   })();
 
   const projects: ProjectModel[] = [
+    {
+      name: 'website',
+      prettyName: 'Personal Website',
+      technologies: ['Next.js', 'Tailwind', 'Firebase', 'React', 'TypeScript'],
+    },
     {
       name: 'vue-chess',
       prettyName: 'Chess',

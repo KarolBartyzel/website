@@ -24,3 +24,6 @@ yarn-error.log*
 .firebase
 .github
 serviceWorker.ts
+scripts/build-project.js
+public/vue-chess/
+projects/

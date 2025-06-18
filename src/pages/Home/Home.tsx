@@ -20,7 +20,13 @@ export interface IHomeProps {
   projects: ProjectModel[];
 }
 
-const Home = ({ informations, experiences, educations, contact, projects }: IHomeProps) => (
+const Home = ({
+  informations,
+  experiences,
+  educations,
+  contact,
+  projects,
+}: IHomeProps) => (
   <div className="max-w-6xl w-full px-6 py-4 flex flex-col gap-6">
     <Photo />
     <AboutMe informations={informations} />

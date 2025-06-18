@@ -1,7 +1,0 @@
-@media screen and (max-width: 700px) {
-  .page-navigation {
-    position: fixed;
-    background-color: #d6eeff;
-    border-top: solid 1.5px gray;
-    bottom: 0;
-    width: 100vw; } }

@@ -16,10 +16,8 @@ const Experience = ({ experiences }: IExperienceProps) => {
         Commercial Experience
       </h1>
       {experiences ? (
-                <div
-                className="flex flex-wrap justify-center gap-10"
-              >
-        {/* <div
+        <div className="flex flex-wrap justify-center gap-10">
+          {/* <div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl-grid-cols-5 gap-y-10 gap-x-10 w-full
         [&>*]:border-b [&>*:nth-last-child(-n+1)]:border-b-0
         sm:[&>*:nth-last-child(-n+2)]:border-b-0

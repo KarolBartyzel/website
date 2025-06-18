@@ -3,7 +3,8 @@ import Link from 'next/link';
 
 const PageHeader = () => {
   return (
-    <div className="font-mono fixed h-10 flex-shrink-0 top-0
+    <div
+      className="font-mono fixed h-10 flex-shrink-0 top-0
       w-screen m-auto z-10 bg-white
       flex content-center justify-center"
     >
