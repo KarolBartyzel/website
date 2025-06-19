@@ -22,25 +22,24 @@ const ContactItem = ({ label, color, Icon, handleClick }: Props) => {
 
   return (
     <div className="flex flex-col w-40 items-center gap-2 cursor-pointer">
-      <IconContext.Provider value={{ color }}>
-        <Icon
-          size="2em"
-          className="transition-all duration-100
-          hover:scale-105 hover:opacity-90 hover:bg-gray-100"
-          onClick={handleClick}
-        />
-        <button
-          className="flex flex-row items-center gap-2 transition-all duration-100
-          hover:scale-105 hover:opacity-90 hover:bg-gray-100"
-          onClick={() => {
-            copy(label);
-            setIsCopied(isCopied => !isCopied);
-          }}
-        >
-          <MdContentCopy color="black" />
-          <h3>{isCopied ? 'Copied!' : label}</h3>
-        </button>
-      </IconContext.Provider>
+      <Icon
+        size="2em"
+        style={{ color }}
+        className={`transition-all duration-100
+        hover:scale-105 hover:opacity-90 hover:bg-gray-100`}
+        onClick={handleClick}
+      />
+      <button
+        className="flex flex-row items-center gap-2 transition-all duration-100
+        hover:scale-105 hover:opacity-90 hover:bg-gray-100"
+        onClick={() => {
+          copy(label);
+          setIsCopied(isCopied => !isCopied);
+        }}
+      >
+        <MdContentCopy color="black" />
+        <h3>{isCopied ? 'Copied!' : label}</h3>
+      </button>
     </div>
   );
 };

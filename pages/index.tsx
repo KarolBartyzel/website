@@ -64,13 +64,15 @@ export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
   const projects: ProjectModel[] = [
     {
       name: 'website',
-      prettyName: 'Personal Website',
+      prettyName: 'This Website',
       technologies: ['Next.js', 'Tailwind', 'Firebase', 'React', 'TypeScript'],
+      hasDemo: false,
     },
     {
       name: 'vue-chess',
       prettyName: 'Chess',
       technologies: ['Vue.js'],
+      hasDemo: true,
     },
   ];
 
