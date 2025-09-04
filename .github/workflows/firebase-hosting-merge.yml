@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout website code
         uses: actions/checkout@v3
+        with:
+          submodules: true
 
       - name: Install website dependencies
         run: npm install
@@ -20,7 +22,9 @@ jobs:
         run: git submodule update --init --recursive
 
       - name: Build projects
-        run: npm run build-project vue-chess
+        run: |
+          npm run build-project vue-chess
+          npm run build-project rick-and-morty
 
       - name: Build and export
         run: |

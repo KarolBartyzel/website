@@ -26,4 +26,5 @@ yarn-error.log*
 serviceWorker.ts
 scripts/build-project.js
 public/vue-chess/
+public/rick-and-morty/
 projects/

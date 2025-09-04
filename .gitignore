@@ -31,3 +31,4 @@ yarn-error.log*
 .eslintcache
 
 /public/vue-chess/
+/public/rick-and-morty/

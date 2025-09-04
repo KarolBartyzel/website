@@ -1,3 +1,6 @@
 [submodule "projects/vue-chess"]
 	path = projects/vue-chess
 	url = https://github.com/KarolBartyzel/vue-chess
+[submodule "projects/rick-and-morty"]
+	path = projects/rick-and-morty
+	url = https://github.com/KarolBartyzel/rick-and-morty

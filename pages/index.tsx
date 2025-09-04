@@ -69,6 +69,12 @@ export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
       hasDemo: false,
     },
     {
+      name: 'rick-and-morty',
+      prettyName: 'Rick and Morty wiki',
+      technologies: ['React', 'Typescript', 'Tanstack Router / Table / Query'],
+      hasDemo: true,
+    },
+    {
       name: 'vue-chess',
       prettyName: 'Chess',
       technologies: ['Vue.js'],
